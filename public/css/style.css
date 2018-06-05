@@ -1,0 +1,685 @@
+#welcome{
+    background: url("images/mac-blur-7px.png") center bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
+#mainNav{
+    background: rgba(225,225,225,.2);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(100, 100, 100, .5);
+}
+#mainNav .navbar-right li a, #mainNav .navbar-right li{
+    color: #111;
+    transition: all .45s;
+    text-shadow: .025em .025em .05em rgb(132, 206, 235);
+}
+#mainNav .navbar-right:last-child{
+    margin-right: 1em;
+}
+#logo img{
+    width: 17.5em;
+}
+.navbar-right .dropdown:hover > a, .navbar-right .dropdown:focus >a{
+    outline: none;
+    color: #111 !important;
+}
+.whitened>a{
+    color: #b2b2b2 !important;
+}
+.navbar-right>.open>a:focus, .navbar-right>.open>a{
+    background-color: transparent !important;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    outline: none;
+    background-color: #f4f4f4;
+}
+.dropdown{
+    padding: .5em;
+}
+#logButton{
+    margin: .55em .25em 0 0;
+    background-color: rgb(132, 206, 235);
+}
+#regButton{
+    margin: .55em .5em 0 0;
+    background-color: rgb(90, 185, 234);
+}
+#logButton, #regButton, .logButton_alike, .regButton_alike{
+    border-radius: .35em;
+    outline: none !important;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -ms-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+#logButton:hover{
+    background-color: rgb(117, 188, 216);
+}
+#regButton:hover{
+    background-color: rgb(74, 174, 226);
+}
+#logButton>a, #regButton>a{
+    font-size: 1.3em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.eachpoll {
+    float: left;
+    display: inline-block;
+    position: relative;
+    margin: 0 0 1.5% 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px 20px 0 10px;
+    transition: ease .3s  ;
+    top: 0;
+    border: solid 1px rgba(0,0,0,.15);
+    height: auto;
+    background: -moz-linear-gradient(to bottom right,  rgba(0,0,0,0) 0%, rgba(193, 200, 228, .3) 100%);
+    background: -webkit-linear-gradient(to bottom right,  rgba(0,0,0,0) 0%, rgba(193, 200, 228, .3) 100%);
+    background: linear-gradient(to bottom right,  rgba(0,0,0,0) 0%, rgba(193, 200, 228, .3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6dddddd',GradientType=0 );
+}
+.eachpoll:hover{
+    box-shadow: 1px 1px 6px rgba(0,0,0,.25);
+}
+.poll{
+    position: relative;
+}
+.poll .front, .grid .front{
+    padding: 0 13px 18px 23px;
+    position: relative !important;
+}
+.poll .front .question, .grid .front .question{
+    font-size: 24px;
+    color: #222;
+    text-shadow: 1px 1px 1px rgba(136, 96, 208, .4);
+    margin-bottom: .5em;
+    margin-top: 1.1em;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 3px;
+    border-bottom: 1px double #8860D0;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 4%;
+}
+.poll .front label, .grid .front label{
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    min-height: 40px;
+    text-align: left;
+    border-radius: 3px !important;
+    background-color: rgba(230, 230, 230, 1);
+    margin-bottom: 15px;
+    width: auto;
+    transition: background .3s
+}
+.poll .front label:hover, .grid .front label:hover{
+    background-color: rgba(210, 210, 210, 1);
+}
+.poll .poll_url{
+    font-size: 9px;
+    text-decoration: none;
+    color: #8860D0;
+    text-align: center;
+}
+.selectedAnswer{
+    background: rgba(210, 210, 210, 1) !important;
+    border: 1px solid rgba(200, 200, 200, 1) !important;
+}
+.after_radio{
+    color: #000;
+    list-style: none;
+    text-align: left;
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: .15em;
+}
+.result-bar {
+    padding: 5% 18% 0 0;
+}
+.result-bar li {
+    list-style: none;
+}
+.gradient {
+    margin:  0 25px 0 0;
+    height: 5px;
+    padding: 0;
+    text-indent: 101%;
+    position: relative;
+    background: linear-gradient(to right, #2b9635, #2b9635, #43dc14, #fff600, #ff7200, #ff6000);
+    white-space: pre;
+    border-radius: 2px;
+}
+.gradient > div > div{
+    font-size: 11px;
+    left: 0;
+    font-family: arial;
+    color: #000;
+    position: absolute;
+    text-indent: 3px;
+    top:-3px;
+}
+.gradient > div{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    transition: background .3s,left 1s;
+    background: rgba(230,230,230,1);
+}
+label:hover .gradient > div, label.selectedAnswer .gradient > div{
+    background: rgba(210,210,210,1);
+}
+.gradient-w {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ebebeb;
+}
+.already_voted {
+    width: 94%;
+}
+.back .question {
+    font-size: 24px;
+    color: #111;
+    margin-left: 15px;
+    text-shadow: 1px 1px 1px #adc4ff;
+}
+.grid{
+    margin-top: 1%;
+    padding: 0;
+    width: 100% !important;
+    list-style: none;
+}
+.grid-sizer,.eachpoll {
+    width: 32.5%;
+    min-width: 300px;
+}
+.gutter-sizer{
+    visibility: hidden;
+    width: 1%;
+}
+.grid-sizer{
+    visibility: hidden;
+}
+.grid-item{
+    box-sizing: border-box;
+}
+.form-control:focus{
+    border-color: rgb(90, 185, 234);
+    box-shadow: inset 0 1px .1em rgb(193, 200, 228), 0 0 .1em rgb(90, 185, 234);
+}
+.logButton_alike{
+    background-color: rgb(132, 206, 235);
+}
+.regButton_alike{
+    background-color: rgb(90, 185, 234);
+}
+.logButton_alike, .regButton_alike{
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    border: none;
+    outline: none;
+ }
+.logButton_alike:hover{
+    background-color: rgb(117, 188, 216);
+    border: none;
+}
+.logButton_alike:focus, .logButton_alike:active, .btn-primary:active:hover{
+    background-color: rgb(117, 188, 216);
+    border: none;
+}
+.regButton_alike:hover{
+    background-color: rgb(74, 174, 226);
+    border: none;
+}
+.regButton_alike:focus, .regButton_alike:active{
+    background-color: rgb(74, 174, 226);
+    border: none;
+}
+.btn-link{
+    color: rgb(90, 185, 234);
+}
+.btn-link:hover{
+    color: rgb(74, 174, 226);
+    text-decoration: none;
+}
+.off_heading{
+    text-align: center;
+    color: #333333;
+    margin: .3em 0 .5em 0;
+}
+.off_heading + section{
+    text-align: center;
+    margin: .3em 0 .8em 0;
+}
+.off_heading + section > button{
+    height: 2em;
+    width: 4.4em;
+    border-radius: .2em;
+    font-weight: 600;
+}
+.listing{
+    font-size: 18px;
+    list-style-type: none;
+}
+.listing li{
+    color: #333;
+}
+.listing li > a{
+    border-bottom: solid 1px transparent;
+    transition: border-bottom-color .4s ease-out;
+    color: #111;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(90, 185, 234, .4);
+    font-weight: 600;
+    text-decoration: none;
+}
+.listing li:hover > a{
+    border-bottom: solid 1px #333;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -1em;
+    padding: 2.25em;
+    border-radius: 50%;
+    background-color: rgba(225,225,225,.5);
+}
+.content>form input{
+    outline: none;
+    border: transparent;
+    border-radius: 3px;
+    padding-left: .25em;
+    width: 7.5em;
+    height: 2.35em
+}
+.content>form>button{
+    color: #000;
+    border-radius: 3px;
+    border: transparent;
+    transition: all .35s;
+    height: 2.35em;
+    outline: none;
+    background-color: rgb(132, 206, 235);
+}
+.content>form>button:hover, #solveTest button:hover, #createTest_form .core-btn:hover, .core-btn + select:hover, #createPoll_form .core-btn:hover, #createPoll_form select:hover, .view_results:hover, #verifyTest button:hover, #selectFolder:hover{
+    background-color: rgb(117, 188, 216);
+}
+.content>form>button:active, #solveTest button:active, #createTest_form .core-btn:active, .core-btn + select:active, #createPoll_form .core-btn:active, #createPoll_form select:active, .view_results:active, #verifyTest button:active, #selectFolder:active{
+    background-color: rgba(117, 188, 216, .7);
+}
+#solveTest{
+    margin: 8% 0 0 0;
+}
+#solveTest h1{
+    text-align: center;
+    color: #000;
+}
+#solveTest>label, #solveTest>ol{
+    padding-left: 15%;
+}
+#solveTest > ol > .task > .test_answers span{
+    vertical-align: text-bottom;
+}
+#solveTest > ol > .task > .test_answers input[type="checkbox"]{
+    margin: .2em;
+    width: 1em;
+    height: 1em;
+}
+.points{
+    padding-left: .5em;
+}
+.longerQuestions{
+    width: 50em;
+}
+.longerQuestions > input[type="text"]{
+    width: 100%;
+}
+#solveTest input[type="text"], #createTest_form input[type="text"], #createTest_form input[type="number"], #createPoll_form input[type="text"], #verifyTest input[type="number"], .renameFolder input{
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #777;
+    background: transparent;
+    padding-left: .25em;
+}
+#solveTest button, #createTest_form .core-btn, .core-btn + select, #createPoll_form .core-btn, #createPoll_form select, #verifyTest button, #selectFolder, .activateButton{
+    color: #000;
+    border-radius: 3px;
+    border: 0 solid transparent;
+    transition: all .35s;
+    outline: none;
+    width: 5em;
+    height: 2.2em;
+    background-color: rgb(132, 206, 235);
+    margin: 1em .1em 1em 0;
+}
+#solveTest h4{
+    margin: .6em 0 0 .8em;
+    display: inline-block;
+}
+#createTest_form, #createPoll_form{
+    margin-top: 7%;
+}
+#createTest_form .task{
+    margin-top: .5em;
+}
+#createTest_form input[type="text"]{
+    padding: .25em;
+}
+#createTest_form .core-btn{
+    height: 2.1em;
+    width: auto;
+}
+.core-btn + select, #createPoll_form select, #selectFolder{
+    width: 6.5em !important;
+    height: 2.1em;
+}
+#createTest_form input[type="number"], #verifyTest input[type="number"]{
+    width: 8.5em;
+    height: 2.15em;
+}
+#createTest_form .rightAnswerVal{
+    width: 8.5em;
+}
+.del_task, .delPoll, .delFolder, .cancelRename{
+    background: #ff9696;
+    border-radius: 50%;
+    border: 1px solid #ebebeb;
+    outline: none;
+    color: #000;
+    font-weight: bold;
+    vertical-align: middle;
+    transition: all .3s;
+    width: 2em;
+    height: 2em;
+}
+.del_task{
+    vertical-align: bottom;
+    margin-left: .5em;
+}
+.cancelRename{
+    height: auto;
+    border: 1px transparent;
+    width: 1.6em;
+}
+.cancelRename:hover{
+    background: #ff6d6d;
+}
+.delFolder{
+    position: absolute;
+    right: 0.65em;
+    margin-top: 1em;
+}
+.delFolder:hover{
+    background: #ff6d6d;
+    border: 1px solid #333;
+}
+.delFolder:active{
+    background: #fc5050;
+    border: 1px solid #000;
+}
+.del_task:hover, .delete_button:hover, .delPoll:hover, .del_poll:hover{
+    background: #ff6d6d;
+    border: 1px solid #ccc;
+}
+.del_task:active, .delete_button:hover, .delPoll:hover, .del_poll:active{
+    background: #fc5050;
+    border: 1px solid #999;
+}
+.glyphicon-plus, .submitRename{
+    border: none;
+    outline: none;
+    background: #8eff8e;
+    border-radius: 50%;
+    color: #555;
+    margin: 0 .3em .1em .3em;
+    vertical-align: bottom;
+}
+.checked_ra, .get_id:hover, .submitRename:hover, .glyphicon-plus:hover{
+    color: #000;
+    background: #44ce44;
+}
+.delete_button, .del_poll{
+    background: #ff9696;
+    outline: none;
+    border: 1px solid #ebebeb;
+    color: #000;
+    border-radius: 3px;
+    height: 2.5em;
+    transition: all .4s;
+}
+.accessCode{
+    text-decoration: none !important;
+    font-weight: 600;
+    text-shadow: .025em .025em .05em rgb(132, 206, 235);
+    color: #111 !important;
+    border-bottom: 1px solid transparent;
+    transition: all .5s;
+}
+.accessCode:hover{
+    border-bottom: 1px solid #111;
+}
+.personal_data{
+    margin-bottom: 1em;
+}
+.glyphicon-plus{
+    color: #000;
+    background: #44ce44;
+    width: 1.8em;
+    height: 1.8em;
+    margin-bottom: 0.25em;
+    font-weight: bold;
+}
+#createPoll_form .core-btn, #createPoll_form select{
+    margin: 0;
+}
+.get_id, .view_results{
+    background: #8eff8e;
+    color: #000;
+    border-radius: 3px;
+    height: 2.4em;
+    outline: none;
+    border: 0 solid transparent;
+    transition: all .35s;
+}
+.view_results{
+    width: 9em;
+    background-color: rgb(132, 206, 235);
+}
+.paging{
+    text-align: center;
+    margin-top: 1%;
+}
+.paging>a{
+    margin: 0 4px;
+    padding-top: 2px;
+    font-size: 16px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background-color: rgba(0,0,0,.10);
+    border-radius: 3px;
+    color: #000 !important;
+    text-shadow: .025em .025em .05em rgb(132, 206, 235);
+    text-decoration: none !important;
+}
+.paging>a:hover {
+    background-color: rgba(0,0,0,.15);
+}
+.pageDown, .pageUp{
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(225deg);
+}
+.pageDown{
+    left: 2px;
+    border-top: 0.2em solid rgba(0,0,0,.8);
+    border-right: 0.2em solid rgba(0,0,0,.8);
+}
+.pageUp{
+    right: 2px;
+    border-left: 0.2em solid rgba(0,0,0,.8);
+    border-bottom: 0.2em solid rgba(0,0,0,.8);
+}
+.welcomingHeading{
+    font-size: 30px;
+    text-align: center;
+    color: #000;
+    margin: 0 0 .5em 0;
+}
+#addFolder{
+    display: block;
+    margin: auto;
+    height: 2.2em;
+    width: 2.2em;
+    color: #000;
+    font-weight: bold;
+    background: #8eff8e;
+    transition: all .3s;
+}
+#addFolder:hover{
+    background: #44ce44;
+}
+.addFold_info{
+    margin: auto;
+    text-align: center;
+}
+.folderWrap{
+    width: 11em;
+    position: relative;
+    display: inline-block;
+    margin: .5em .9em 0 0.9em;
+    text-align: center;
+    transition: all .5s;
+}
+.folders{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+}
+.folders:hover{
+    color: #000 !important;
+    text-shadow: .025em .025em .05em rgb(132, 206, 235);
+    text-decoration: none !important;
+}
+.verifyBut{
+    width: 11em !important;
+    margin-left: 1em !important;
+}
+.activateButton{
+    background: #44ce44;
+    width: 6em;
+    transition: .4s;
+}
+.activateButton:hover{
+    background: #30a830;
+}
+.folderPolls, .folderTests{
+    font-size: 18px;
+    color: #000;
+}
+.folderPolls>a, .folderTests>a{
+    text-decoration: none;
+    color: #111111;
+    font-size: 16px;
+    border-bottom: 1px solid transparent;
+    transition: all .4s;
+}
+.folderPolls>a:hover, .folderTests>a:hover{
+    border-bottom: 1px solid #222;
+}
+.folderPolls>a{
+    text-shadow: 1px 1px 1px rgba(136, 96, 208, .4);
+}
+.folderTests>a{
+    text-shadow: .025em .025em .05em rgb(132, 206, 235);
+}
+.row{
+    margin: 0;
+}
+.given_answer{
+    border-bottom: 1px solid;
+}
+.studentLink{
+    font-size: 32px;
+    text-align: center;
+    top: 50%;
+    color: #111111;
+    margin-top: 22%;
+}
+.studentLink>a{
+    text-decoration: none;
+    color: #000;
+    text-shadow: .025em .025em .05em rgb(132, 206, 235);
+    border-bottom: 1px solid transparent;
+    transition: all .4s;
+}
+.studentLink>a:hover{
+    border-bottom: 1px solid #555;
+}
+#answers{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.keeper:last-of-type{
+    margin-bottom: 1em;
+}
+.renameFoldBtn, .copyPollLink{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: initial;
+    transition: all .4s;
+}
+.copyPollLink{
+    border-radius: 50%;
+}
+.copyPollLink + span{
+    position: absolute;
+    right: 0;
+    top: 2.7em;
+    font-size: .8em;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    display: none;
+}
+.copyPollLink + span::before{
+    border-color: transparent transparent #888 transparent;
+    border-image: none;
+    border-style: dashed;
+    border-width: .5em;
+    content: " ";
+    display: block;
+    right: 2.25em;
+    top: -0.8em;
+    position: absolute;
+}
+.renameFoldBtn:hover, .copyPollLink:hover{
+    background: #e0e0e0;
+}
+.renameFolder{
+    display: none;
+}
+.checkTestRA{
+    color: #08ff08;
+    text-shadow: 0.1em 0.1em 0.08em #c4c4c4;
+}
